@@ -11,7 +11,7 @@ To give you a head start we have supplied a basic structure with react router sh
 
 You have to start by making these two endpoints work by adding them to the api in the backend.
 
-When you have your app ready and up and running it's time to make the security analysis. Start by creating an account at detectify.com. For Detectify to work you need to have your site online, therefore we will use a tool called ngrok, which is a simple tool to get your site online. Go to ngrok.com, sign up and follow the instructions to get it all working.
+When you have your app ready and up and running it's time to make the security analysis. Start by creating an account at detectify.com. For Detectify to work you need to have your site online and therefore we will use a tool called ngrok, which is a simple tool to tunnel a site that is running on your localhost. Go to ngrok.com, sign up and follow the instructions to get it all working.
 
 This task is completely open for you to decide the scope, design, and functionality. Maybe you want the questions to be upvoted, or sorted in a specific way, or categorized, or some other functionality – it's up to you and your company to decide.
 
