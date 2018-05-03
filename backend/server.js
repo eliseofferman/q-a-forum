@@ -1,1 +1,38 @@
-// Start your server here
+import mongoose from "mongoose"
+import express from "express"
+import bodyParser from "body-parser"
+import cors from "cors"
+// import bcrypt from "bcrypt-nodejs"
+
+const app = express()
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+
+
+app.use(cors())
+mongoose.connect("mongodb://localhost/faq-forum", { useMongoClient: true })
+
+mongoose.Promise = Promise
+
+mongoose.connection.on("error", err => console.error("Connection error:", err))
+mongoose.connection.once("open", () => console.log("Connected to mongodb"))
+
+const Topic = mongoose.model("Topic", {
+  name: String,
+  headline: String,
+  content: String
+})
+
+app.get("/faq", (req, res) => {
+  res.json("this is the backend forum")
+})
+
+app.post("/faq", (req, res) => {
+  const topic = new Topic(req.body)
+
+  topic.save()
+    .then(() => { res.status(201).json({ created: true }) })
+    .catch(err => { res.status(400).send(err.message) })
+})
+
+app.listen(8081, () => console.log("FAQ forum listening on port 8081"))
