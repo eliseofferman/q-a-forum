@@ -28,8 +28,9 @@ const Answer = mongoose.model("Answer", {
 })
 
 app.get("/faq", (req, res) => {
-  Topic.find().then(topicList => {
-    res.json(topicList)
+  Topic.find().then(newTopic => {
+    console.log(newTopic)
+    res.json(newTopic)
   })
 })
 

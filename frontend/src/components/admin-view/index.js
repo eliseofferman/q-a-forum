@@ -1,53 +1,37 @@
 import React from "react"
+import AnswerInput from "../answer-input/index"
 
 export default class AdminView extends React.Component {
+
   constructor(props) {
     super(props)
     this.state = {
-      answer: ""
+      topicList: []
     }
-    }
-  handleAnswerSubmit = event => {
-    event.preventDefault()
-    fetch("http://localhost:8080/faq", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, textplain, */*",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(this.state)
-    }).then(response => {
-      if (response.status === 201) {
-        this.setState({
-          answer: ""
-        })
-      }
-    }).catch(err => {
-      // api down? request failed?
-      console.log("Error!", err)
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:8080/faq").then((response) => {
+      return response.json()
+    }).then((json) => {
+      this.setState({
+        topicList: json
+      })
+      console.log(this.state.topicList)
     })
   }
 
-  handleAnswer = event => {
-    this.setState({
-      answer: event.target.value
-    })
-  }
+
+
 
   render() {
     return (
       <div>
-        <form onSubmit={this.handleAnswerSubmit}>
-          <label>
-            <p>Enter your answer</p>
-            <input
-              name="answer"
-              type="text"
-              value={this.state.answer}
-              onChange={this.handleAnswer} />
-          </label>
-          <button>Send</button>
-        </form>
+        {this.state.topicList.map((topic) => {
+          return <AnswerInput
+            object={topic}/>
+        })}
+
       </div>
     )
   }

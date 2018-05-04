@@ -33,8 +33,9 @@ export default class HomeView extends React.Component {
         <section>
           <h4>Most recent questions:</h4>
           <hr />
-          {this.state.topicList.map(topic => (
+          {this.state.topicList.map((topic, index) => (
             <Topic
+              key={index}
               headline={topic.headline}
               content={topic.content}
               name={topic.name}
