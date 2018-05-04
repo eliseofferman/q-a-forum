@@ -35,14 +35,25 @@ app.get("/faq", (req, res) => {
   })
 })
 
+app.get("/answer", (req, res) => {
+  Answer.find().then(newAnswer => {
+    console.log(newAnswer)
+    res.json(newAnswer)
+  })
+})
+
 app.post("/faq", (req, res) => {
   const topic = new Topic(req.body)
   console.log(topic)
-  const answer = new Answer(req.body)
 
   topic.save()
     .then(() => { res.status(201).json({ created: true }) })
     .catch(err => { res.status(400).send(err.message) })
+})
+
+app.post("/answer", (req, res) => {
+  const answer = new Answer(req.body)
+    console.log(answer)
 
   answer.save()
     .then(() => { res.status(201).json({ created: true }) })

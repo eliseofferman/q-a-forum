@@ -11,7 +11,7 @@ export default class AnswerInput extends React.Component {
 
   handleAnswerSubmit = event => {
     event.preventDefault()
-    fetch("http://localhost:8080/faq", {
+    fetch("http://localhost:8080/answer", {
       method: "POST",
       headers: {
         Accept: "application/json, textplain, */*",
