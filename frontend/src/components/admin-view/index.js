@@ -9,7 +9,7 @@ export default class AdminView extends React.Component {
     }
   handleAnswerSubmit = event => {
     event.preventDefault()
-    fetch("http://localhost:8081/faq", {
+    fetch("http://localhost:8080/faq", {
       method: "POST",
       headers: {
         Accept: "application/json, textplain, */*",

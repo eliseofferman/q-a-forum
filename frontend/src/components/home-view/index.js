@@ -38,7 +38,8 @@ export default class HomeView extends React.Component {
               headline={topic.headline}
               content={topic.content}
               name={topic.name}
-              date={topic.date} />
+            //  date={topic.date}
+             />
           ))}
         </section>
       </div>
