@@ -24,7 +24,8 @@ const Topic = mongoose.model("Topic", {
 })
 
 const Answer = mongoose.model("Answer", {
-  answer: String
+  answer: String,
+  topicId: String
 })
 
 app.get("/faq", (req, res) => {

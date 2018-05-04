@@ -10,7 +10,8 @@ export default class TopicForm extends React.Component {
     }
   }
 
-  handleSubmit = event => {
+  handleSubmitTopic = event => {
+    console.log("Test")
     event.preventDefault()
     this.props.onNewTopic(this.state)
     fetch("http://localhost:8080/faq", {
@@ -55,7 +56,7 @@ export default class TopicForm extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit} >
+        <form onSubmit={this.handleSubmitTopic} >
           <div>
             <label>
               <h3>Name:</h3>
@@ -81,7 +82,7 @@ export default class TopicForm extends React.Component {
                 onChange={this.handleContent} />
             </label>
           </div>
-          <button type="submit">Submit</button>
+          <button>Submit</button>
         </form>
       </div>
     )
