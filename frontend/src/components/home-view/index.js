@@ -6,7 +6,8 @@ export default class HomeView extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      topicList: []
+      topicList: [],
+      answerList: []
     }
   }
 
@@ -16,7 +17,18 @@ export default class HomeView extends React.Component {
     )).then(json => {
       this.setState({ topicList: json })
     })
+    fetch("http://localhost:8080/answer").then(response => (
+      response.json()
+    )).then(json => {
+      this.setState({ answerList: json })
+    })
   }
+
+  // handleNewAnswer = answer => {
+  //   this.setState({
+  //     answerList: s
+  //   })
+  // }
 
   handleNewTopic = topic => {
     this.setState({
@@ -39,6 +51,7 @@ export default class HomeView extends React.Component {
               headline={topic.headline}
               content={topic.content}
               name={topic.name}
+              answer={this.state.answerList}
             //  date={topic.date}
              />
           ))}

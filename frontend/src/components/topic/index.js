@@ -9,6 +9,7 @@ export default class Topic extends React.Component {
         <div>
           <p>{this.props.content}</p>
           <p>{this.props.name}</p>
+          <p>{this.props.answer}</p>
          {/* <p>{this.props.date}</p> */}
         </div>
       </div>
