@@ -10,6 +10,7 @@ export default class AnswerInput extends React.Component {
   }
 
   handleAnswerSubmit = event => {
+      console.log("TestAnswer")
     event.preventDefault()
     fetch("http://localhost:8080/answer", {
       method: "POST",
