@@ -13,10 +13,11 @@ export default class Topic extends React.Component {
 
     return (
       <div>
-        <h1>{this.props.headline}</h1>
+        <h1>Question: {this.props.headline}</h1>
         <div>
           <p>{this.props.content}</p>
           <p>{this.props.name}</p>
+          <h3>Answer:</h3>
           {svar.map( (x, index) => (
 
             <p>{x.answer}</p>
