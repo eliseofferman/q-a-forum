@@ -21,7 +21,7 @@ export default class HomeView extends React.Component {
     fetch("http://localhost:8080/answer").then(response => (
       response.json()
     )).then(json => {
-      console.log("answers", json)
+      console.log("answers ", json)
       this.setState({ answerList: json })
     })
   }
