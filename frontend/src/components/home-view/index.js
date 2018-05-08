@@ -41,7 +41,7 @@ export default class HomeView extends React.Component {
   render() {
     return (
       <div >
-        <h4>Ask your question:</h4>
+        <h1>Ask your question:</h1>
         <hr />
         <TopicForm onNewTopic={this.handleNewTopic} />
         <section>
