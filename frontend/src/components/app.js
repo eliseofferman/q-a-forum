@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom"
 import Navigation from "./navigation"
 import HomeView from "./home-view"
 import AdminView from "./admin-view"
-import "./style.css"
+
 
 export default class App extends React.Component {
 
@@ -11,7 +11,7 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
 
-        <div className="menulinks">
+        <div>
           <Navigation />
           <Route exact path="/" component={HomeView} />
           <Route path="/admin" component={AdminView} />

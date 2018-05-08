@@ -1,0 +1,17 @@
+ .linkstyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+ul {
+display: flex;
+justify-content: space-evenly;
+list-style-type: none;
+}
+
+.navigationmenu {
+  font-size: 20px;
+  color: #e52476;
+}
