@@ -1,6 +1,8 @@
 import React from "react"
 import "./topicForm.css"
 
+import flowerbg from "../../images/bgflower.jpg"
+
 export default class TopicForm extends React.Component {
   constructor(props) {
     super(props)
@@ -57,10 +59,13 @@ export default class TopicForm extends React.Component {
   render() {
     return (
       <div className="topic-form-container">
+
+        <h1 className="question-logo"> [ QUESTION THIS ]</h1>
+
         <form onSubmit={this.handleSubmitTopic} >
           <div className="topic-form-box">
             <label>
-              <h3>Name:</h3>
+              <h3 className="topic-headline">name &not;</h3>
               <input
                 placeholder="Your name, pls!"
                 className="topicform-inputbox"
@@ -70,7 +75,7 @@ export default class TopicForm extends React.Component {
                 onChange={this.handleName} />
             </label>
             <label>
-              <h3>Topic:</h3>
+              <h3 className="topic-headline">topic &not;</h3>
               <input
                 className="topicform-inputbox"
                 placeholder="Type topic here"
@@ -80,7 +85,7 @@ export default class TopicForm extends React.Component {
                 onChange={this.handleHeadline} />
             </label>
             <label>
-              <h3>Message:</h3>
+              <h3 className="topic-headline">message &not;</h3>
               <textarea
                 className="topicform-inputbox--message"
                 placeholder="What's on your ❤️?"
@@ -91,6 +96,7 @@ export default class TopicForm extends React.Component {
           </div>
           <button className="topicform-submitbutton">Submit</button>
         </form>
+
       </div>
     )
   }
