@@ -15,11 +15,13 @@ export default class HomeView extends React.Component {
     fetch("http://localhost:8080/faq").then(response => (
       response.json()
     )).then(json => {
+      console.log("Topics", json);
       this.setState({ topicList: json })
     })
     fetch("http://localhost:8080/answer").then(response => (
       response.json()
     )).then(json => {
+      console.log("answers", json)
       this.setState({ answerList: json })
     })
   }
@@ -51,9 +53,10 @@ export default class HomeView extends React.Component {
               headline={topic.headline}
               content={topic.content}
               name={topic.name}
-              answer={this.state.answerList}
-            //  date={topic.date}
-             />
+              answers={this.state.answerList}
+              answersId={topic._id}
+              //  date={topic.date}
+            />
           ))}
         </section>
       </div>
