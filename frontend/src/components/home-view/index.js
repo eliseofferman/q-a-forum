@@ -54,7 +54,7 @@ export default class HomeView extends React.Component {
               content={topic.content}
               name={topic.name}
               answers={this.state.answerList}
-              answersId={topic._id}
+              topicId={topic._id}
               //  date={topic.date}
             />
           ))}
