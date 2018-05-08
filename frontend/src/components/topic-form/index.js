@@ -56,12 +56,14 @@ export default class TopicForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="topic-form-container">
         <form onSubmit={this.handleSubmitTopic} >
-          <div>
+          <div className="topic-form-box">
             <label>
               <h3>Name:</h3>
               <input
+                placeholder="Your name, pls!"
+                className="topicform-inputbox"
                 name="name"
                 type="text"
                 value={this.state.name}
@@ -70,6 +72,8 @@ export default class TopicForm extends React.Component {
             <label>
               <h3>Topic:</h3>
               <input
+                className="topicform-inputbox"
+                placeholder="Type topic here"
                 name="headline"
                 type="text"
                 value={this.state.headline}
@@ -78,12 +82,14 @@ export default class TopicForm extends React.Component {
             <label>
               <h3>Message:</h3>
               <textarea
+                className="topicform-inputbox--message"
+                placeholder="What's on your ❤️?"
                 name="content"
                 value={this.state.content}
                 onChange={this.handleContent} />
             </label>
           </div>
-          <button>Submit</button>
+          <button className="topicform-submitbutton">Submit</button>
         </form>
       </div>
     )
