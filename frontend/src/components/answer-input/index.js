@@ -41,11 +41,11 @@ export default class AnswerInput extends React.Component {
   render () {
     return (
       <div>
-        <h3>{this.props.object.headline}</h3>
-        <p>{this.props.object.content}</p>
+        <h3>Headline: {this.props.object.headline}</h3>
+        <p>Description: {this.props.object.content}</p>
         <form onSubmit={this.handleAnswerSubmit}>
           <label>
-            <p>Enter your answer</p>
+            <p>Enter your answer: </p>
             <input
               name="answer"
               type="text"
