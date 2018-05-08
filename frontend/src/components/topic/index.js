@@ -19,8 +19,7 @@ export default class Topic extends React.Component {
           <p>Submitted by: {this.props.name}</p>
           <h3>Answer:</h3>
           {svar.map( (x, index) => (
-
-            <p>Input: {x.answer}</p>
+            <p key={index} >Input: {x.answer}</p>
           ))}
 
         </div>
