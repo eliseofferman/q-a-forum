@@ -2,6 +2,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  background: red;
+  color: white;
+  height: 60px;
+  width: 150px;
+  text-align: center;
+
+}
+
+.linkstyle a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 

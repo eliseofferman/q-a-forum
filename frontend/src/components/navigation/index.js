@@ -11,12 +11,12 @@ export default class Navigation extends React.Component {
         <ul>
           <li className="linkstyle">
             <Link to="/admin">
-              Admin
+              admin
             </Link>
           </li>
           <li className="linkstyle">
             <Link to="/">
-              Home
+              home
             </Link>
           </li>
         </ul>

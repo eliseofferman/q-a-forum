@@ -2,6 +2,8 @@ import React from "react"
 import TopicForm from "../topic-form"
 import Topic from "../topic"
 
+import "./home-view.css"
+
 export default class HomeView extends React.Component {
   constructor(props) {
     super(props)
@@ -40,12 +42,13 @@ export default class HomeView extends React.Component {
 
   render() {
     return (
-      <div >
-        <h1>Ask your question:</h1>
+      <div className="homeView-container">
         <hr />
-        <TopicForm onNewTopic={this.handleNewTopic} />
-        <section>
-          <h4>Most recent questions:</h4>
+        <TopicForm
+          className="topic-form-container"
+          onNewTopic={this.handleNewTopic} />
+        <section className="questionanswer-container">
+          <h4>Recent questions:</h4>
           <hr />
           {this.state.topicList.map((topic, index) => (
             <Topic
