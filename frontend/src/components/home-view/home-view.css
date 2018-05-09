@@ -1,5 +1,5 @@
 .homeView-container {
-  background-color: lightyellow;
+  background-color: white;
   display: flex;
   flex-flow: column;
   width: 100%;
@@ -9,7 +9,6 @@
 
 .questionanswer-container {
   margin-left: 200px;
-
 }
 
 h4 {

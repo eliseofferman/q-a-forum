@@ -43,13 +43,13 @@ export default class HomeView extends React.Component {
   render() {
     return (
       <div className="homeView-container">
-        <hr />
+
         <TopicForm
           className="topic-form-container"
           onNewTopic={this.handleNewTopic} />
         <section className="questionanswer-container">
           <h4>Recent questions &not;</h4>
-          <hr />
+
           {this.state.topicList.map((topic, index) => (
             <Topic
               key={index}

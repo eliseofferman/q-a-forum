@@ -12,11 +12,12 @@ export default class Topic extends React.Component {
 
     return (
       <div>
-        <h1 className="topic-headline">{this.props.headline}</h1>
+        <h1 className="topic-headline">question: {this.props.headline}</h1>
         <div className="qa-container">
-          <p>{this.props.content}</p>
-          <p>Submitted by: {this.props.name}</p>
-          <h3>Answer:</h3>
+          <p className="question-txt">question: {this.props.content}</p>
+          <p className="topic-p">posted by: {this.props.name}</p>
+
+          <p className="topic-p">answer:</p>
           {svar.map((x, index) => (
             <p key={index}>Input: {x.answer}</p>
           ))}

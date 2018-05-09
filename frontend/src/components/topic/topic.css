@@ -1,6 +1,28 @@
 .qa-container {
   width: 600px;
   height: auto;
+  padding: 20px;
   margin-bottom: 30px;
   background: lightgrey;
+  border-radius: 5px 20px 0 0;
+}
+
+.qa-container h3{
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
+
+.topic-p {
+  font-size: 16px;
+  color: red;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.question-txt {
+  font-size: 16px;
+  color: red;
+  font-family: 'IBM Plex Mono', monospace;
+  background: white;
+  padding: 2px;
+
 }
