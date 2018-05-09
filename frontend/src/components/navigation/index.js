@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import "./style.css"
+import "./navigation.css"
 
 export default class Navigation extends React.Component {
 
   render() {
     return (
       <div>
-        <div className="navigationmenu">
-        <ul>
+        <div >
+        <ul className="navigationmenu">
           <li className="linkstyle">
             <Link to="/admin">
               admin

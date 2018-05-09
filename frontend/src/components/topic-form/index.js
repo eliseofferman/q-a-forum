@@ -1,7 +1,6 @@
 import React from "react"
 import "./topicForm.css"
 
-
 export default class TopicForm extends React.Component {
   constructor(props) {
     super(props)

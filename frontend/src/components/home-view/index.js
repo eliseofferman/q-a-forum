@@ -17,7 +17,7 @@ export default class HomeView extends React.Component {
     fetch("http://localhost:8080/faq").then(response => (
       response.json()
     )).then(json => {
-      console.log("Topics", json);
+      console.log("Topics", json)
       this.setState({ topicList: json })
     })
     fetch("http://localhost:8080/answer").then(response => (
@@ -48,7 +48,7 @@ export default class HomeView extends React.Component {
           className="topic-form-container"
           onNewTopic={this.handleNewTopic} />
         <section className="questionanswer-container">
-          <h4>Recent questions:</h4>
+          <h4>Recent questions &not;</h4>
           <hr />
           {this.state.topicList.map((topic, index) => (
             <Topic
