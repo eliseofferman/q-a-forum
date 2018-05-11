@@ -6,7 +6,8 @@ export default class AnswerInput extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      answer: ""
+      answer: "",
+      topicId: ""
     }
   }
 
@@ -39,6 +40,46 @@ export default class AnswerInput extends React.Component {
     })
   }
 
+  handleDelete = event => {
+  console.log("test delete")
+  console.log(this.props._id)
+    fetch("http://localhost:8080/answer", {
+     method: "DELETE",
+     headers: {
+       Accept: "application/json, textplain, */*",
+       "Content-Type": "application/json"
+     },
+     body: JSON.stringify({topicId: this.props.topicId})
+
+ }).then(response => {
+   response.status === 201
+
+
+ }).catch(err => {
+   // api down? request failed?
+   console.log("Error!", err)
+ })
+
+ fetch("http://localhost:8080/faq", {
+  method: "DELETE",
+  headers: {
+    Accept: "application/json, textplain, */*",
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({_id: this.props.topicId})
+
+}).then(response => {
+response.status === 201
+
+
+}).catch(err => {
+// api down? request failed?
+console.log("Error!", err)
+})
+}
+
+
+
   render () {
     const answerInAdmin = this.props.answers.filter(answer => {
       // console.log("X", x)
@@ -49,6 +90,10 @@ export default class AnswerInput extends React.Component {
     return (
       <div className="answer-admin-container">
         <h3 className="topic-headline-question">Topic: {this.props.object.headline}</h3>
+        <div onClick={this.handleDelete} className="delete-button-box">
+          <div className="delete-button-box--x-1" />
+          <div className="delete-button-box--x-2" />
+        </div>
         <p className="question-txt--admin"> 🚀: {this.props.object.content}</p>
         {answerInAdmin.map((x, index) => (
           <p className="question-txt--admin-white" key={index}>Posted answer: {x.answer}</p>
