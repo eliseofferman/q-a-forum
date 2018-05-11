@@ -1,0 +1,67 @@
+.admin-container {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 200px;
+  background: #fab;
+}
+
+.admin-headline {
+  font-family: 'Oswald', sans-serif;
+  font-size: 80px;
+  margin-top: 20px;
+  margin-left: -100px;
+
+}
+
+.answer-admin-container {
+  display: flex;
+  flex-flow: column;
+  width: 600px;
+  margin: 80px 0px 0px 0px;
+  background: lightgrey;
+  padding: 20px;
+  height: auto;
+}
+
+.topic-headline-question {
+  background: red;
+  width: 300px;
+  height: auto;
+  border-radius: 5px 15px 0 0;
+  color: white;
+  font-size: 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
+.question-txt--admin {
+  font-size: 16px;
+  color: red;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 2px;
+}
+
+.topicform-inputbox {
+  border-style: none;
+  padding-left: 10px;
+  outline: none;
+  width: 90%;
+  height:50px;
+  font-size: 18px;
+  color: red;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.topicform-inputbox--message {
+  border-style: none;
+  padding-left: 10px;
+  outline: none;
+  width: 90%;
+  height:400px;
+  font-size: 18px;
+  color: red;
+  font-family: 'IBM Plex Mono', monospace;
+}

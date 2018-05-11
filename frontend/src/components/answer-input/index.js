@@ -47,9 +47,9 @@ export default class AnswerInput extends React.Component {
     console.log("answerInAdmin:", answerInAdmin)
 
     return (
-      <div>
-        <h3>Headline: {this.props.object.headline}</h3>
-        <p>Description: {this.props.object.content}</p>
+      <div className="answer-admin-container">
+        <h3 className="topic-headline-question">Topic: {this.props.object.headline}</h3>
+        <p className="question-txt--admin"> 🚀: {this.props.object.content}</p>
         {answerInAdmin.map((x, index) => (
           <p key={index}>Posted answer: {x.answer}</p>
         ))}
@@ -57,6 +57,7 @@ export default class AnswerInput extends React.Component {
           <label>
             <p>Enter your answer: </p>
             <input
+              className="topicform-inputbox--message question-txt"
               name="answer"
               type="text"
               value={this.state.answer}

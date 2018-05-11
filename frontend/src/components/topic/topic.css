@@ -4,7 +4,41 @@
   padding: 20px;
   margin-bottom: 30px;
   background: lightgrey;
-  border-radius: 5px 20px 0 0;
+  border-radius: 0px 20px 0 0;
+}
+
+.headline-delete-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 600px;
+  height: auto;
+  align-items: flex-end;
+}
+
+.delete-button-box {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.delete-button-box:hover {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.delete-button-box--x-1 {
+  width: 22px;
+  height: 3px;
+  background: red;
+  transform: rotate(45deg) translate(-8px, 9px);
+}
+.delete-button-box--x-2 {
+  width: 22px;
+  height: 3px;
+  background: red;
+  transform: rotate(-45deg) translate(-8px, -11px);
 }
 
 .qa-container h3{
@@ -18,11 +52,22 @@
   font-family: 'IBM Plex Mono', monospace;
 }
 
+.topic-headline-question {
+  background: red;
+  width: 300px;
+  height: auto;
+  border-radius: 5px 15px 0 0;
+  color: white;
+  font-size: 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
 .question-txt {
   font-size: 16px;
   color: red;
   font-family: 'IBM Plex Mono', monospace;
   background: white;
   padding: 2px;
-
 }

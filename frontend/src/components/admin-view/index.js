@@ -29,7 +29,9 @@ export default class AdminView extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="admin-container">
+
+        <h1 className="admin-headline">[ Admin this ]</h1>
         {this.state.topicList.map((topic) => {
           return <AnswerInput
             object={topic}
