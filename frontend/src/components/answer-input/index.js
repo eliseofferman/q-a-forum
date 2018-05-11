@@ -54,8 +54,8 @@ export default class AnswerInput extends React.Component {
           <p key={index}>Posted answer: {x.answer}</p>
         ))}
         <form onSubmit={this.handleAnswerSubmit}>
-          <label>
-            <p>Enter your answer: </p>
+          <label className="answer-admin-container--box">
+            <p className="topic-headline-question">admin answer goes here: </p>
             <input
               className="topicform-inputbox--message question-txt"
               name="answer"
@@ -63,7 +63,7 @@ export default class AnswerInput extends React.Component {
               value={this.state.answer}
               onChange={this.handleAnswer} />
           </label>
-          <button>Send</button>
+          <button className="answer-admin-button">Send</button>
         </form>
       </div>
     )
