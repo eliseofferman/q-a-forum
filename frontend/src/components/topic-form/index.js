@@ -86,7 +86,7 @@ export default class TopicForm extends React.Component {
               <h3 className="topic-headline">message &not;</h3>
               <textarea
                 className="topicform-inputbox--message"
-                placeholder="What's on your ❤️?"
+                placeholder="🚀?"
                 name="content"
                 value={this.state.content}
                 onChange={this.handleContent} />
