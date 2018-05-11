@@ -40,10 +40,19 @@ export default class AnswerInput extends React.Component {
   }
 
   render () {
+    const answerInAdmin = this.props.answers.filter(answer => {
+      // console.log("X", x)
+      return answer.topicId === this.props.topicId
+    })
+    console.log("answerInAdmin:", answerInAdmin)
+
     return (
       <div>
         <h3>Headline: {this.props.object.headline}</h3>
         <p>Description: {this.props.object.content}</p>
+        {answerInAdmin.map((x, index) => (
+          <p key={index}>Posted answer: {x.answer}</p>
+        ))}
         <form onSubmit={this.handleAnswerSubmit}>
           <label>
             <p>Enter your answer: </p>

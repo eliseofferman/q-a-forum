@@ -6,7 +6,8 @@ export default class AdminView extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      topicList: []
+      topicList: [],
+      answerList: []
     }
   }
 
@@ -17,19 +18,24 @@ export default class AdminView extends React.Component {
       this.setState({
         topicList: json
       })
-      console.log(this.state.topicList)
+    })
+    fetch("http://localhost:8080/answer").then(response => (
+      response.json()
+    )).then(json => {
+      console.log("answers ", json)
+      this.setState({ answerList: json })
     })
   }
-
-
-
 
   render() {
     return (
       <div>
         {this.state.topicList.map((topic) => {
           return <AnswerInput
-            object={topic}/>
+            object={topic}
+            answers={this.state.answerList}
+            topicId={topic._id}
+          />
         })}
 
       </div>
