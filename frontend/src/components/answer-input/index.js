@@ -51,7 +51,7 @@ export default class AnswerInput extends React.Component {
         <h3 className="topic-headline-question">Topic: {this.props.object.headline}</h3>
         <p className="question-txt--admin"> 🚀: {this.props.object.content}</p>
         {answerInAdmin.map((x, index) => (
-          <p key={index}>Posted answer: {x.answer}</p>
+          <p className="question-txt--admin-white" key={index}>Posted answer: {x.answer}</p>
         ))}
         <form onSubmit={this.handleAnswerSubmit}>
           <label className="answer-admin-container--box">
