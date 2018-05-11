@@ -60,4 +60,15 @@ app.post("/answer", (req, res) => {
     .catch(err => { res.status(400).send(err.message) })
 })
 
+app.delete("/answer", (req, res) => {
+  Answer.remove({ topicId: req.body.topicId }, function(err) {
+    if (!err) {
+            res.status(200).json({ removed: true })
+    }
+    else {
+            res.status(400).json({ removed: false })
+    }
+})
+})
+
 app.listen(8080, () => console.log("FAQ forum listening on port 8080"))
