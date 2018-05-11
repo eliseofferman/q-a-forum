@@ -71,4 +71,15 @@ app.delete("/answer", (req, res) => {
 })
 })
 
+app.delete("/faq", (req, res) => {
+  Topic.remove({ _id: req.body._id }, function(err) {
+    if (!err) {
+            res.status(200).json({ removed: true })
+    }
+    else {
+            res.status(400).json({ removed: false })
+    }
+})
+})
+
 app.listen(8080, () => console.log("FAQ forum listening on port 8080"))
