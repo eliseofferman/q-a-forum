@@ -31,7 +31,10 @@ export default class AnswerInput extends React.Component {
   }
 
   handleAnswer = event => {
-    this.setState({ answer: event.target.value, topicId: this.props.object._id })
+    this.setState({
+      answer: event.target.value,
+      topicId: this.props.object._id })
+      console.log("Test",this.state.answer);
   }
 
   handleDelete = event => {
