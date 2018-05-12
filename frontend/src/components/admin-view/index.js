@@ -12,33 +12,30 @@ export default class AdminView extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/faq").then((response) => {
-      return response.json()
-    }).then((json) => {
+    fetch("http://localhost:8080/faq").then(response => (
+      response.json()
+    )).then(json => (
       this.setState({
         topicList: json
       })
-    })
+    ))
     fetch("http://localhost:8080/answer").then(response => (
       response.json()
-    )).then(json => {
-      console.log("answers ", json)
+    )).then(json => (
       this.setState({ answerList: json })
-    })
+    ))
   }
 
   render() {
     return (
       <div className="admin-container">
-
         <h1 className="admin-headline">[ Admin this ]</h1>
-        {this.state.topicList.map((topic) => {
-          return <AnswerInput
+        {this.state.topicList.map(topic => (
+          <AnswerInput
             object={topic}
             answers={this.state.answerList}
-            topicId={topic._id}
-          />
-        })}
+            topicId={topic._id} />
+        ))}
 
       </div>
     )

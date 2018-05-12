@@ -26,12 +26,6 @@ export default class HomeView extends React.Component {
     })
   }
 
-  // handleNewAnswer = answer => {
-  //   this.setState({
-  //     answerList: s
-  //   })
-  // }
-
   handleNewTopic = topic => {
     this.setState({
       topicList: [topic, ...this.state.topicList]
@@ -55,9 +49,7 @@ export default class HomeView extends React.Component {
               content={topic.content}
               name={topic.name}
               answers={this.state.answerList}
-              topicId={topic._id}
-              //  date={topic.date}
-            />
+              topicId={topic._id} />
           ))}
         </section>
       </div>

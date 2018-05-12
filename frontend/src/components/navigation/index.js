@@ -8,20 +8,20 @@ export default class Navigation extends React.Component {
     return (
       <div>
         <div >
-        <ul className="navigationmenu">
-          <li className="linkstyle">
-            <Link to="/admin">
-              admin
-            </Link>
-          </li>
-          <li className="linkstyle">
-            <Link to="/">
-              home
-            </Link>
-          </li>
-        </ul>
+          <ul className="navigationmenu">
+            <li className="linkstyle">
+              <Link to="/admin">
+                admin
+              </Link>
+            </li>
+            <li className="linkstyle">
+              <Link to="/">
+                home
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
     )
   }
 }

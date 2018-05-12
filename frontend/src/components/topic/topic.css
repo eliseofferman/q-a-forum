@@ -7,40 +7,6 @@
   border-radius: 0px 20px 0 0;
 }
 
-.headline-delete-container {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  width: 600px;
-  height: auto;
-  align-items: flex-end;
-}
-
-.delete-button-box {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  position: relative;
-}
-
-.delete-button-box:hover {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-.delete-button-box--x-1 {
-  width: 22px;
-  height: 3px;
-  background: red;
-  transform: rotate(45deg) translate(-8px, 9px);
-}
-.delete-button-box--x-2 {
-  width: 22px;
-  height: 3px;
-  background: red;
-  transform: rotate(-45deg) translate(-8px, -11px);
-}
-
 .qa-container h3{
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
