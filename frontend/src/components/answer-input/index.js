@@ -6,7 +6,8 @@ export default class AnswerInput extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      answer: ""
+      answer: "",
+      topicId: ""
     }
   }
 
@@ -30,7 +31,7 @@ export default class AnswerInput extends React.Component {
   }
 
   handleAnswer = event => {
-    this.setState({ answer: event.target.value })
+    this.setState({ answer: event.target.value, topicId: this.props.object._id })
   }
 
   handleDelete = event => {

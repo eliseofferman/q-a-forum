@@ -1,7 +1,6 @@
 import React from "react"
 import TopicForm from "../topic-form"
 import Topic from "../topic"
-
 import "./home-view.css"
 
 export default class HomeView extends React.Component {

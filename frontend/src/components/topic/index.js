@@ -4,9 +4,9 @@ import "./topic.css"
 export default class Topic extends React.Component {
 
   render() {
-    const svar = this.props.answers.filter(x => {
-      return x.topicId === this.props.topicId
-    })
+    const svar = this.props.answers.filter(x => (
+      x.topicId === this.props.topicId
+    ))
 
     return (
       <div>
