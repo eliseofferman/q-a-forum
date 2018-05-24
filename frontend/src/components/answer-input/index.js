@@ -13,7 +13,7 @@ export default class AnswerInput extends React.Component {
 
   handleAnswerSubmit = event => {
     event.preventDefault()
-    fetch("http://localhost:8080/answer", {
+    fetch("https://q-a-forum.herokuapp.com/answer", {
       method: "POST",
       headers: {
         Accept: "application/json, textplain, */*",
@@ -38,7 +38,7 @@ export default class AnswerInput extends React.Component {
   }
 
   handleDelete = event => {
-    fetch("http://localhost:8080/answer", {
+    fetch("https://q-a-forum.herokuapp.com/answer", {
       method: "DELETE",
       headers: {
         Accept: "application/json, textplain, */*",
@@ -52,7 +52,7 @@ export default class AnswerInput extends React.Component {
       console.log("Error!", err)
     })
 
-    fetch("http://localhost:8080/faq", {
+    fetch("https://q-a-forum.herokuapp.com/faq", {
       method: "DELETE",
       headers: {
         Accept: "application/json, textplain, */*",

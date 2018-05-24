@@ -12,14 +12,14 @@ export default class AdminView extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/faq").then(response => (
+    fetch("https://q-a-forum.herokuapp.com/faq").then(response => (
       response.json()
     )).then(json => (
       this.setState({
         topicList: json
       })
     ))
-    fetch("http://localhost:8080/answer").then(response => (
+    fetch("https://q-a-forum.herokuapp.com/answer").then(response => (
       response.json()
     )).then(json => (
       this.setState({ answerList: json })

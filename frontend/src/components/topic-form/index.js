@@ -14,7 +14,7 @@ export default class TopicForm extends React.Component {
   handleSubmitTopic = event => {
     event.preventDefault()
     this.props.onNewTopic(this.state)
-    fetch("http://localhost:8080/faq", {
+    fetch("https://q-a-forum.herokuapp.com/faq", {
       method: "POST",
       headers: {
         Accept: "application/json, textplain, */*",
