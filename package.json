@@ -1,6 +1,5 @@
 {
   "name": "backend",
-  "homepage": "https://eliseofferman.github.io/q-a-forum",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
