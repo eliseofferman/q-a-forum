@@ -28,13 +28,15 @@ export default class AnswerInput extends React.Component {
       // api down? request failed?
       console.log("Error!", err)
     })
+
+    this.props.callbackNewAnswer(this.state)
   }
 
   handleAnswer = event => {
     this.setState({
       answer: event.target.value,
-      topicId: this.props.object._id })
-      console.log("Test",this.state.answer);
+      topicId: this.props.object._id
+    })
   }
 
   handleDelete = event => {
@@ -65,6 +67,7 @@ export default class AnswerInput extends React.Component {
       // api down? request failed?
       console.log("Error!", err)
     })
+    this.props.callbackDelete(this.props.index)
   }
 
   render() {

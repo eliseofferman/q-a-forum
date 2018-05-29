@@ -26,16 +26,35 @@ export default class AdminView extends React.Component {
     ))
   }
 
+  deleteQuestion = index => {
+    const topics = this.state.topicList
+    topics.splice(index, 1)
+    this.setState({
+      topicList: topics
+    })
+  }
+
+  showNewAnswer = addedAnswer => {
+    const answers = this.state.answerList
+    answers.push(addedAnswer)
+    this.setState({
+      answerList: answers
+    })
+  }
+
   render() {
     return (
       <div className="admin-container">
         <h1 className="admin-headline">[ Admin this ]</h1>
         {this.state.topicList.map((topic, index) => (
           <AnswerInput
+            index={index}
             key={index}
             object={topic}
             answers={this.state.answerList}
-            topicId={topic._id} />
+            topicId={topic._id}
+            callbackDelete={this.deleteQuestion}
+            callbackNewAnswer={this.showNewAnswer} />
         ))}
 
       </div>

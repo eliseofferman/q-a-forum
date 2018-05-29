@@ -34,13 +34,11 @@ export default class HomeView extends React.Component {
   render() {
     return (
       <div className="homeView-container">
-
         <TopicForm
           className="topic-form-container"
           onNewTopic={this.handleNewTopic} />
-        <section className="questionanswer-container">
-          <h4>Recent questions &not;</h4>
-
+        <div className="questionanswer-container">
+          <h4>Recent questions</h4>
           {this.state.topicList.map((topic, index) => (
             <Topic
               key={index}
@@ -50,7 +48,7 @@ export default class HomeView extends React.Component {
               answers={this.state.answerList}
               topicId={topic._id} />
           ))}
-        </section>
+        </div>
       </div>
     )
   }
